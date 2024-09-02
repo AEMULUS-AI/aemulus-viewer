@@ -1,4 +1,4 @@
-## Authors
+## Collaborators
 - Dorje Kongtsa
 - Steven Luo
 - Ziying Guo

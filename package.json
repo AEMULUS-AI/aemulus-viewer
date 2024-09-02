@@ -1,0 +1,17 @@
+{
+    "name": "aemulus-viewer",
+    "version": "1.0.1",
+    "main": "index.js",
+    "dependencies": {
+        "@mkkellogg/gaussian-splats-3d": "^0.4.3",
+        "firebase": "^10.13.1",
+        "react": "^16.13.1",
+        "three": "^0.160.1"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Aemulus Tech",
+    "license": "ISC",
+    "description": ""
+}

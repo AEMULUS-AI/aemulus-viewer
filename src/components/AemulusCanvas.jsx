@@ -2,10 +2,11 @@ import GsViewer from "./GsViewer";
 import React from "react";
 import { initializeApp } from 'firebase/app';
 import { getFirestore, doc, getDoc } from "firebase/firestore";
-import { getStorage, ref, getDownloadURL } from "firebase/storage"
+import { getStorage, ref, getDownloadURL } from "firebase/storage";
+import { firebaseConfig } from "./firebaseConfig";
 import { useEffect, useState } from "react";
 
-async function get_url_firebase(id, firebaseConfig) {
+async function get_url_firebase(id) {
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app, 'version-1');
     const storage = getStorage(app, "gs://aemulusai.appspot.com");
@@ -34,10 +35,10 @@ async function get_url_firebase(id, firebaseConfig) {
 }
 
 export function AemulusCanvas({id, apiKey, authDomain, projectId, storageBucket, messagingSenderId, appId, measurementId}) {
-    const [loading, setLoading] = useState(true); // State to manage loading state
-    const [error, setError] = useState(null); // State to manage any potential errors
-    const [url, setUrl] = useState(null); // State to manage the URL of the Gaussian splats
-    
+    const [loading, setLoading] = useState(true); 
+    const [error, setError] = useState(null); 
+    const [url, setUrl] = useState(null); 
+
     useEffect(() => {
         async function fetchData() {
             try {
